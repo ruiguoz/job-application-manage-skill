@@ -2,6 +2,8 @@
 
 [简体中文](README.md) | [English](README.en.md)
 
+![求职申请管理流程宣传图](assets/job-application-manage-hero.jpg)
+
 一个可复用的 Codex Skill，用于将招聘邮件、招聘官网、岗位页面和用户补充信息整理成统一、按优先级排序的求职申请流程。
 
 ## 功能
