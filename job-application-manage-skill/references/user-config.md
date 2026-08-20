@@ -21,6 +21,12 @@ Keep user-specific defaults here. Ask before changing a confirmed preference, an
 
 No target is enabled by default. Enable only the targets the user supplies.
 
+## Calendar assistance
+
+- Calendar target, timezone, default reminder, and default event duration: unknown; inspect or ask when calendar creation is requested.
+- Calendar creation is disabled by default. Enable it only for events the user explicitly requests or approves.
+- Never add attendees or expose private recruiting links without explicit approval.
+
 ### Feishu spreadsheet
 
 - URL, sheet, managed range, and field mapping: unknown; inspect or ask.
@@ -57,4 +63,3 @@ No target is enabled by default. Enable only the targets the user supplies.
 - Keep exactly two blank rows between populated categories when the target supports physical rows.
 - Use one uniform light header/category fill and white data rows; avoid mixed category colors.
 - Preserve content and formatting outside the configured managed range or section.
-
