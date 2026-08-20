@@ -24,6 +24,7 @@ Then ask Codex to use `$job-application-manage-skill` to inspect recruiting upda
 - Ranks records as P0–P3 and puts important active items first.
 - Separates upcoming actions, overdue follow-ups, active applications, offers, not-matched results, closed cases, expired cases, and planned applications.
 - Preserves exact official status wording and asks the user instead of inventing missing facts.
+- Prepares calendar candidates from interviews, assessments, and deadlines, then creates events or reminders after the details are verified and approved.
 - Syncs or exports to Feishu, Notion, Excel, GitHub Markdown, portable Markdown, and other cloud spreadsheets, databases, or documents.
 - Supports Chinese, English, or optional bilingual presentation.
 - Enforces deterministic category order, two-row spacing where supported, and a restrained single-color layout.
@@ -77,6 +78,12 @@ Synchronize the normalized tracker to Notion and export copies as Excel, GitHub-
 
 ```text
 Update the tracker using optional Chinese/English labels, while preserving the original language of official application statuses.
+```
+
+### Add interview events with confirmation
+
+```text
+Find confirmed interviews and assessments in the latest recruiting emails. Preview the event title, time, timezone, meeting link, and reminder; after I approve the details, add them to my calendar without creating duplicates.
 ```
 
 ## Privacy
