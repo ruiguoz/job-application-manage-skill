@@ -6,6 +6,16 @@
 
 A reusable Codex skill for turning recruiting emails, applicant portals, job pages, and user notes into one prioritized application pipeline.
 
+## Install
+
+Copy the `job-application-manage-skill` folder into your Codex skills directory:
+
+```text
+~/.codex/skills/job-application-manage-skill
+```
+
+Then ask Codex to use `$job-application-manage-skill` to inspect recruiting updates and maintain your tracker.
+
 ## What it does
 
 - Reconciles and deduplicates job applications from multiple sources.
@@ -66,16 +76,6 @@ Synchronize the normalized tracker to Notion and export copies as Excel, GitHub-
 ```text
 Update the tracker using optional Chinese/English labels, while preserving the original language of official application statuses.
 ```
-
-## Install
-
-Copy the `job-application-manage-skill` folder into your Codex skills directory:
-
-```text
-~/.codex/skills/job-application-manage-skill
-```
-
-Then ask Codex to use `$job-application-manage-skill` to inspect recruiting updates and maintain your tracker.
 
 ## Privacy
 
