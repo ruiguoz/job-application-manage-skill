@@ -1,67 +1,80 @@
-# Job Application Manage Skill
+# Job Application Manage 求职申请管理 Skill
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[简体中文](README.md) | [English](README.en.md)
 
-A reusable Codex skill for turning recruiting emails, applicant portals, job pages, and user notes into one prioritized application pipeline.
+一个可复用的 Codex Skill，用于将招聘邮件、招聘官网、岗位页面和用户补充信息整理成统一、按优先级排序的求职申请流程。
 
-## What it does
+## 功能
 
-- Reconciles and deduplicates job applications from multiple sources.
-- Ranks records as P0–P3 and puts important active items first.
-- Separates upcoming actions, overdue follow-ups, active applications, offers, not-matched results, closed cases, expired cases, and planned applications.
-- Preserves exact official status wording and asks the user instead of inventing missing facts.
-- Syncs or exports to Feishu, Notion, Excel, GitHub Markdown, portable Markdown, and other cloud spreadsheets, databases, or documents.
-- Supports Chinese, English, or optional bilingual presentation.
-- Enforces deterministic category order, two-row spacing where supported, and a restrained single-color layout.
+- 汇总并去重来自多个来源的求职申请。
+- 使用 P0–P3 重要性等级排序，将重要且仍需处理的事项放在最前面。
+- 区分未来安排、逾期跟进、进行中、Offer、暂不匹配、流程结束、已过期和投递意向。
+- 保留招聘方的官方状态原文；信息缺失时询问用户，不编造日期或结果。
+- 支持同步或导出到飞书、Notion、Excel、GitHub Markdown、通用 Markdown，以及其他云表格、云数据库和云文档。
+- 支持中文、英文，以及可选的中英双语展示。
+- 固定类目顺序；在支持的文档中，类目之间保持两行空白，并采用克制统一的单色样式。
 
-## Examples
+## 表格示例
 
-### Update a tracker from recruiting email
+以下内容使用虚构公司和示例日期：
 
-```text
-Use $job-application-manage-skill to check recruiting emails from the last 14 days, deduplicate the applications, rank important actions first, and update my Feishu tracker.
-```
+| 类目 | 公司 | 目标岗位 | 重要性 | 当前状态与下一步 | 地点 | 投递时间 | 关键时间点 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 待处理·重要 | 示例科技 | AI 算法工程师 | P0 / 紧急 | 面试邀请；确认参加并准备面试 | 广州 | 2026-08-01 | 2026-08-25 14:00 视频面试 |
+| 待办·未来安排 | 示例银行 | 后端开发工程师 | P2 / 一般 | 笔试已确认；按时参加 | 深圳 | 2026-08-08 | 2026-08-28 19:00 在线笔试 |
+| 结果·暂不匹配 | 示例零售 | 数据工程师 | P3 / 低 | 暂不匹配；无需操作 | 广州 | 2026-08-03 | 2026-08-20 官网状态更新 |
+| 投递意向·尚未投递 | 示例能源 | 数字化工程师 | P2 / 一般 | 尚未投递；核对岗位和截止日期 | 广州 | — | 截止日期待确认 |
 
-### Reconcile official portal statuses
+实际写入云文档时，Skill 会根据目标平台使用类目行、分组视图或类目字段，并在支持物理行的表格中保持类目之间恰好两行空白。
 
-```text
-Check the application statuses in these official applicant portals. Preserve the exact official wording, move not-matched applications into their own category, and ask me about anything uncertain before editing the tracker.
-```
+## 使用示例
 
-### Build a city-first application plan
-
-```text
-Add my planned applications to the tracker and recommend suitable roles. Prioritize Guangzhou and roles with a calmer work pace. Mark workload judgments as inference.
-```
-
-### Separate urgent, upcoming, and overdue actions
+### 根据招聘邮件更新表格
 
 ```text
-Reorganize the tracker by importance. Put interviews and deadlines within seven days under priority actions, separate future events from overdue follow-ups, and keep exactly two blank rows between categories.
+使用 $job-application-manage-skill 检查最近 14 天的招聘邮件，去重投递记录，按重要性把待处理事项放在最前面，并更新我的飞书求职表。
 ```
 
-### Export to multiple formats
+### 核对招聘官网状态
 
 ```text
-Synchronize the normalized tracker to Notion and export copies as Excel, GitHub-flavored Markdown, and portable Markdown. Keep the current Feishu tracker as the canonical source.
+检查这些招聘官网里的申请状态，保留官方状态原文，把“暂不匹配”的申请单独分类；编辑表格前，遇到不确定的信息先问我。
 ```
 
-### Use optional bilingual labels
+### 按优先城市规划投递
 
 ```text
-Update the tracker using optional Chinese/English labels, while preserving the original language of official application statuses.
+把我的投递意向加入表格并推荐适合的岗位。优先广州和工作节奏相对清闲的岗位；对工作强度的判断请标注为推测。
 ```
 
-## Install
+### 区分重要、未来和逾期事项
 
-Copy the `job-application-manage-skill` folder into your Codex skills directory:
+```text
+按重要性重新整理表格。七天内的面试和截止日期放到“待处理·重要”，未来事项和已经超过时间的事项分开，并在类目之间固定空两行。
+```
+
+### 导出到多种格式
+
+```text
+把标准化后的求职表同步到 Notion，并分别导出 Excel、GitHub Markdown 和通用 Markdown；继续以飞书表格作为主数据源。
+```
+
+### 使用可选中英双语
+
+```text
+使用可选的中英双语字段名更新表格，但招聘官网的官方状态仍保留原语言。
+```
+
+## 安装
+
+将 `job-application-manage-skill` 文件夹复制到 Codex 的 Skills 目录：
 
 ```text
 ~/.codex/skills/job-application-manage-skill
 ```
 
-Then ask Codex to use `$job-application-manage-skill` to inspect recruiting updates and maintain your tracker.
+然后让 Codex 使用 `$job-application-manage-skill` 检查招聘动态并维护求职进度表。
 
-## Privacy
+## 隐私
 
-The repository contains no personal tracker URLs, mailbox addresses, credentials, or application records. Keep private values in your local `references/user-config.md` and review repository visibility before publishing any generated tracker.
+本仓库不包含个人求职表链接、邮箱地址、账号凭据或真实投递记录。请将私人配置保存在本地的 `references/user-config.md` 中，并在公开任何生成的求职表之前检查仓库可见性。
