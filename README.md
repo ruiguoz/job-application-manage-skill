@@ -1,5 +1,7 @@
 # Job Application Manage Skill
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A reusable Codex skill for turning recruiting emails, applicant portals, job pages, and user notes into one prioritized application pipeline.
 
 ## What it does
@@ -25,9 +27,3 @@ Then ask Codex to use `$job-application-manage-skill` to inspect recruiting upda
 ## Privacy
 
 The repository contains no personal tracker URLs, mailbox addresses, credentials, or application records. Keep private values in your local `references/user-config.md` and review repository visibility before publishing any generated tracker.
-
----
-
-# Job Application Manage 求职申请管理 Skill
-
-将招聘邮件、招聘官网、岗位页面和用户补充信息整理为统一、可排序、可同步的求职流程表。支持飞书、Notion、Excel、Markdown 及其他云文档；遇到不确定信息会询问用户，不会编造日期或结果。
