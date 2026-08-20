@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Manage 求职申请管理"
+  short_description: "按重要性整理招聘进度并同步到表格、Markdown 或云文档"
+  default_prompt: "使用 $job-application-manage-skill 检查最新招聘进度，按重要性分类，并同步到我指定的表格或云文档。"
