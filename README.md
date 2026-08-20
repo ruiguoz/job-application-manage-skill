@@ -6,6 +6,16 @@
 
 一个可复用的 Codex Skill，用于将招聘邮件、招聘官网、岗位页面和用户补充信息整理成统一、按优先级排序的求职申请流程。
 
+## 安装
+
+将 `job-application-manage-skill` 文件夹复制到 Codex 的 Skills 目录：
+
+```text
+~/.codex/skills/job-application-manage-skill
+```
+
+然后让 Codex 使用 `$job-application-manage-skill` 检查招聘动态并维护求职进度表。
+
 ## 功能
 
 - 汇总并去重来自多个来源的求职申请。
@@ -66,16 +76,6 @@
 ```text
 使用可选的中英双语字段名更新表格，但招聘官网的官方状态仍保留原语言。
 ```
-
-## 安装
-
-将 `job-application-manage-skill` 文件夹复制到 Codex 的 Skills 目录：
-
-```text
-~/.codex/skills/job-application-manage-skill
-```
-
-然后让 Codex 使用 `$job-application-manage-skill` 检查招聘动态并维护求职进度表。
 
 ## 隐私
 
