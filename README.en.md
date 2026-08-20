@@ -2,6 +2,8 @@
 
 [简体中文](README.md) | [English](README.en.md)
 
+![Job application management workflow hero](assets/job-application-manage-hero.jpg)
+
 A reusable Codex skill for turning recruiting emails, applicant portals, job pages, and user notes into one prioritized application pipeline.
 
 ## What it does
