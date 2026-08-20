@@ -1,6 +1,6 @@
 ---
 name: job-application-manage-skill
-description: Maintain a prioritized job-application tracker with configurable Chinese, English, or bilingual presentation from recruiting emails, official applicant portals, job pages, and user-provided notices; reconcile and deduplicate records; classify priority actions, future actions, overdue follow-ups, active applications, offers, not-matched cases, closed cases, expired cases, and application intentions; sync or export to Feishu, Notion, Excel, GitHub-flavored Markdown, portable Markdown, and other cloud spreadsheets, cloud databases, or cloud documents through schema mapping; and recommend roles using the user's priority cities and work-style preferences. Use whenever Codex needs to check recruiting messages or application status, update or export a job-search table, follow read-only status links, organize deadlines or interviews, rank important applications, compare roles and locations, or maintain the tracker in a cloud document service.
+description: Maintain a prioritized job-application tracker with configurable Chinese, English, or bilingual presentation from recruiting emails, official portals, job pages, and user notices; reconcile and deduplicate records; classify priority, upcoming, overdue, active, offer, not-matched, closed, expired, and planned cases; sync or export to Feishu, Notion, Excel, GitHub-flavored Markdown, portable Markdown, and other cloud documents through schema mapping; prepare and, after explicit approval, create calendar events or reminders for interviews, assessments, and deadlines; and recommend roles using priority cities and work-style preferences. Use whenever Codex needs to check recruiting messages or portal statuses, update or export a job-search tracker, organize deadlines or interviews, add recruiting events to a calendar, rank applications, compare roles and locations, or maintain the tracker in a cloud service.
 ---
 
 # Job Application Manage
@@ -29,6 +29,7 @@ Resolve these values from `user-config.md`, the current tracker, or the conversa
 - Enabled synchronization or export targets: Feishu, Notion, Excel, GitHub Markdown, portable Markdown, or another cloud spreadsheet, cloud database, or cloud document.
 - Target URL/database, field mapping, and managed range.
 - Canonical tracker when multiple writable targets are enabled.
+- Calendar target, timezone, reminder preference, and whether calendar creation is enabled.
 
 Ask the user before the first write if any enabled target, canonical target, or required field mapping is unknown. Do not ask again for values already present in configuration.
 
@@ -39,11 +40,12 @@ Ask the user before the first write if any enabled target, canonical target, or 
 3. Normalize each application using the schema reference. Preserve exact source wording for official statuses.
 4. Reconcile duplicates by company, role, business unit, location, and application identifier when available.
 5. Assign an evidence-based priority, compute temporal state relative to the user's timezone, and classify every record using the ordered category rules.
-6. Build a change set: additions, field updates, category moves, duplicates, and unresolved questions.
+6. Build a change set: additions, field updates, category moves, duplicates, unresolved questions, and proposed calendar events.
 7. Apply the smallest safe update to the canonical tracker, then synchronize or export every other enabled target.
 8. Rebuild the managed table layout deterministically. Enforce the fixed category order, sorting, exactly two blank rows between populated categories, and the uniform color rules.
 9. Read back every edited record and the category boundaries. Verify field values, deduplication, ordering, spacing, and styles.
-10. Report what changed, what remains `待确认`, and the next dated action.
+10. When calendar creation is enabled and explicitly approved, create only the confirmed events, then read them back and verify their details.
+11. Report what changed, what remains `待确认`, the calendar actions taken, and the next dated action.
 
 ## Status and time rules
 
@@ -64,6 +66,16 @@ Ask the user before the first write if any enabled target, canonical target, or 
 - Use the configured presentation language and preserve an existing target's language unless the user requests a change. Default to Chinese for a new target when no preference is recorded.
 - Treat bilingual presentation as optional. When selected, render Chinese first and English second in the same label, such as `公司 / Company` and `待处理·重要 / Priority Actions`.
 - Preserve source-language status wording. Add a concise translation only when useful; never replace the official wording with an inferred translation.
+
+## Calendar assistance
+
+- Extract calendar candidates from confirmed interviews, assessments, attendance decisions, document deadlines, and application deadlines.
+- Prepare an event preview containing title, start and end time, timezone, location or meeting link, company, role, source, and reminder.
+- Ask about any missing or ambiguous date, duration, timezone, location, or calendar target. Never invent a calendar-critical value.
+- Check the target calendar for an existing matching event before creating a new one.
+- Create or update calendar events only after the user explicitly requests or approves the exact event details. Read the saved event back and report its final time.
+- Do not invite attendees, send notifications, accept recruiting invitations, or change application attendance merely because a calendar event is created.
+- Keep private recruiting links in the event description only when the target calendar is private or the user explicitly approves sharing them.
 
 ## Source handling and safety
 
