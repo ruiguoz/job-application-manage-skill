@@ -6,6 +6,8 @@
 
 A reusable Codex skill for turning recruiting emails, applicant portals, job pages, and user notes into one prioritized application pipeline.
 
+The goal is simple: when autumn recruiting season brings mass applications, do not get buried under recruiting emails, assessments, interviews, and portal updates. Let the model collect, deduplicate, and prioritize those scattered signals so the next important action always stays clear.
+
 ## Install
 
 Copy the `job-application-manage-skill` folder into your Codex skills directory:
