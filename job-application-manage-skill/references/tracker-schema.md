@@ -26,6 +26,7 @@ Use these logical fields even when a target exposes different column or property
 | Category | Yes | Exactly one category from the ordered rules below. |
 | Source | Preferred | Official portal, recruiting email, job page, or user notice. |
 | Source link | No | Read-only status or job link when safe to retain. |
+| Status query URL | Preferred | Stable official applicant-portal, application-center, or status-query URL. Exclude action links and expiring or credential-bearing URLs. |
 | Last checked | Preferred | Timestamp in the configured timezone. |
 | Notes | No | Preserve user-authored notes and uncertainty. |
 
@@ -41,6 +42,7 @@ Use these labels when bilingual output is configured:
 - `投递时间 / Application Date`
 - `关键时间点 / Key Timeline`
 - `来源 / Source`
+- `查询地址 / Status Query URL`
 - `最近核对 / Last Checked`
 
 ## Importance levels
