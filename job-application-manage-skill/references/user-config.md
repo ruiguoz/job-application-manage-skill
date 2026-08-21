@@ -30,7 +30,7 @@ No target is enabled by default. Enable only the targets the user supplies.
 ### Feishu spreadsheet
 
 - URL, sheet, managed range, and field mapping: unknown; inspect or ask.
-- Recommended visible fields: Company, Role, Priority, Status / Next Action, Location, Application Date, and Key Timeline.
+- Recommended visible fields: Company, Role, Priority, Status / Next Action, Location, Application Date, Key Timeline, and Status Query URL.
 - Represent Category with label rows unless the existing table uses a dedicated column.
 
 ### Notion database
@@ -62,6 +62,7 @@ No target is enabled by default. Enable only the targets the user supplies.
 - Use the fixed category order in `tracker-schema.md`.
 - Keep exactly two blank rows between populated categories when the target supports physical rows.
 - Audit footer: enabled by default for human-readable tracker views with physical rows. Keep two blank rows before one final audit row; allow the user to disable it.
+- Record a stable official status-query URL whenever recruiting email or a portal provides one; never store one-click action or credential-bearing links as query addresses.
 - Use one uniform light header/category fill and white data rows; avoid mixed category colors.
 - Preserve content and formatting outside the configured managed range or section.
 
