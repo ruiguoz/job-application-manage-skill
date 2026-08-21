@@ -37,6 +37,8 @@ Check `--help` before unfamiliar operations. Use payload files for CSV or JSON t
 
 Represent category labels as ordinary rows within the managed columns. Keep all cells after the label in that row blank unless the configured template explicitly requires otherwise.
 
+Map `Status query URL` to a dedicated URL or text column when available. Prefer a stable official applicant portal or application center. Do not store accept, reject, withdraw, submit, attendance-confirmation, one-time token, or credential-bearing links as query addresses.
+
 When the audit footer is enabled, locate the existing `表格核对 / Audit` row and update it instead of appending another one. Keep exactly two blank rows after the final application record, then write the audit row as the last non-empty row with white or no fill and normal font weight.
 
 ## Notion database
@@ -51,6 +53,7 @@ Use a Notion database with properties mapped to the normalized fields. Prefer th
 - Application date and Last checked: date.
 - Key timeline and Notes: rich text.
 - Source link: URL.
+- Status query URL: URL.
 - Record ID: rich text.
 
 Do not recreate a database or change property types without explicit approval. Ask for the database URL and property mapping when unavailable.
