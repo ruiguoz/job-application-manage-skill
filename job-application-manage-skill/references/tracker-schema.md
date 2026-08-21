@@ -26,6 +26,7 @@ Use these logical fields even when a target exposes different column or property
 | Category | Yes | Exactly one category from the ordered rules below. |
 | Source | Preferred | Official portal, recruiting email, job page, or user notice. |
 | Source link | No | Read-only status or job link when safe to retain. |
+| Status query URL | Preferred | Stable official applicant-portal, application-center, or status-query URL. Exclude action links and expiring or credential-bearing URLs. |
 | Last checked | Preferred | Timestamp in the configured timezone. |
 | Notes | No | Preserve user-authored notes and uncertainty. |
 
@@ -41,6 +42,7 @@ Use these labels when bilingual output is configured:
 - `投递时间 / Application Date`
 - `关键时间点 / Key Timeline`
 - `来源 / Source`
+- `查询地址 / Status Query URL`
 - `最近核对 / Last Checked`
 
 ## Importance levels
@@ -101,11 +103,22 @@ Do not use an undifferentiated `历史` category. Represent why a record is no l
 - Keep no blank rows inside a category.
 - Keep exactly two completely blank rows between the final record of one populated category and the label row of the next populated category.
 - Omit empty categories. Do not leave placeholder spacing for them.
-- Keep no decorative blank rows before the first category or after the last category inside the managed range.
+- Keep no decorative blank rows before the first category. After the last category, allow only the two blank rows required by an enabled audit footer.
 - Use the same single light fill for the top header and every category-label row: default `#D9EAF7`, with dark text.
 - Use no fill or plain white for all data rows and separator rows. Remove legacy category colors and accidental mixed fills inside the managed range.
 - Do not use alternating row colors, gradients, conditional fill colors, or one color per category.
 - Use bold text only for the top header and category-label rows. Freeze the top header, wrap text, use automatic row height, and keep readable column widths.
 - Preserve content and formatting outside the configured managed range.
 
-After every update, re-read the managed range and verify the category sequence, zero internal blank rows, exactly two inter-category blank rows, and the uniform palette.
+### Audit footer
+
+- When enabled, keep exactly one audit metadata row as the last non-empty row of the tracker view.
+- Keep exactly two completely blank rows between the final application record and the audit row.
+- Include the configured-timezone timestamp, application-record count, checks performed, unresolved fields, and the next dated action or calendar state.
+- Use white or no fill and normal font weight so the audit row cannot be mistaken for a header, category, or application record.
+- Locate an existing audit row by its stable label, such as `表格核对 / Audit`, and update it in place. Do not append multiple audit rows.
+- Keep table-wide audit metadata in the footer instead of repeating the audit timestamp in every application timeline.
+- When the audit footer is disabled, leave no decorative blank rows after the final application record.
+
+After every update, re-read the managed range and verify the category sequence, zero internal blank rows, exactly two inter-category blank rows, the uniform palette, and—when enabled—exactly two blank rows before one final audit row.
+
