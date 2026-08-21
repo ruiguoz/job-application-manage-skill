@@ -43,7 +43,7 @@ Ask the user before the first write if any enabled target, canonical target, or 
 6. Build a change set: additions, field updates, category moves, duplicates, unresolved questions, and proposed calendar events.
 7. Apply the smallest safe update to the canonical tracker, then synchronize or export every other enabled target.
 8. Rebuild the managed table layout deterministically. Enforce the fixed category order, sorting, exactly two blank rows between populated categories, and the uniform color rules.
-9. Read back every edited record and the category boundaries. Verify field values, deduplication, ordering, spacing, and styles.
+9. Read back every edited record, the category boundaries, and the audit footer when enabled. Verify field values, deduplication, ordering, spacing, styles, and footer placement.
 10. When calendar creation is enabled and explicitly approved, create only the confirmed events, then read them back and verify their details.
 11. Report what changed, what remains `待确认`, the calendar actions taken, and the next dated action.
 
@@ -92,3 +92,4 @@ Ask the user before the first write if any enabled target, canonical target, or 
 - Mark workload and culture judgments as inference unless an official source states them.
 - For a calmer pace, generally investigate internal platform, data governance, research-support, and stable enterprise technical roles before delivery-heavy, on-call operations, production-line, field, or frequent-travel roles.
 - Recommend asking recruiters about overtime, weekend duty, shifts, on-site assignment, travel, performance cycles, and team attrition.
+
