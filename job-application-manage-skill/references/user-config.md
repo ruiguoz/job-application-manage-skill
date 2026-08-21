@@ -61,5 +61,7 @@ No target is enabled by default. Enable only the targets the user supplies.
 
 - Use the fixed category order in `tracker-schema.md`.
 - Keep exactly two blank rows between populated categories when the target supports physical rows.
+- Audit footer: enabled by default for human-readable tracker views with physical rows. Keep two blank rows before one final audit row; allow the user to disable it.
 - Use one uniform light header/category fill and white data rows; avoid mixed category colors.
 - Preserve content and formatting outside the configured managed range or section.
+
