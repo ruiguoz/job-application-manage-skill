@@ -16,6 +16,7 @@ Read [references/user-config.md](references/user-config.md), [references/tracker
 - Continue safe read-only work while waiting when the missing information is non-blocking. Record unresolved factual fields as `待确认`; never invent them.
 - Preserve user-written notes that newer sources do not contradict.
 - Keep one current record per application. Keep different roles, business units, locations, and interview rounds distinct when they represent different applications or appointments.
+- When reading recruiting email, extract and record a stable official read-only applicant-portal or status-query URL. Never treat accept, reject, withdraw, submit, attendance-confirmation, or one-time token links as query URLs.
 
 ## Required configuration
 
